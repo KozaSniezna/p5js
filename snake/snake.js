@@ -1,10 +1,20 @@
 function Snake() {
     var cols = floor(width / scaleFactor);
     var rows = floor(height / scaleFactor);
-    this.pos = createVector(floor(cols / 2) * scaleFactor, floor(rows / 2) * scaleFactor);
-    if (random(1) < 0.5) {
-        this.xspeed = 0;
-        this.yspeed = 0;
+    if (settings.randomStartPos) {
+        this.pos = createVector(floor(random(scaleFactor, cols)), floor(random(scaleFactor, rows)));
+    } else {
+        this.pos = createVector(floor(cols / 2), floor(rows / 2));
+    }
+    this.pos.mult(scaleFactor);
+    if (settings.randomStartVel) {
+        if (random(1) < 0.5) {
+            this.xspeed = 1;
+            this.yspeed = 0;
+        } else {
+            this.xspeed = 0;
+            this.yspeed = 1;
+        }
     } else {
         this.xspeed = 0;
         this.yspeed = 0;

@@ -12,6 +12,7 @@
 // Other possible user controlled settings:
 //  - start snake at a random place on the screen
 //  - start snake moving in a random direction
+// Anything else?
 
 
 
@@ -45,7 +46,10 @@ function readSettings(){
     settings.junkFoodFrequency = select('#dropFrequency').value();
     settings.snakeSpeed = select('#snakeSpeed').value();
     settings.growSpeed = select('#growSpeed').checked();
+    settings.randomStartPos = select('#randomStartPos').checked();
+    settings.randomStartVel = select('#randomStartVel').checked();
     settings.debuggingOn = select('#debug').checked();
+    console.log(settings);
 }
 
 function keyPressed() {
