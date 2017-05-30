@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    color: white;
+
+    font-family: 'VT323', monospace, arial;
+    font-size: 20px;
+}
+
+ul {
+    padding: 0;
+
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+label {
+    /*color: #B3B3B3;*/
+    color: #33FF33;
+}
+
+button {
+    display: inline-block;
+
+    width: 140px;
+    padding: 10px 20px;
+
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+    border: none;
+    border-radius: 6px;
+    background-color: #FFB400;
+
+    font-family: 'VT323', monospace, arial;
+    font-size: 25px;
+}
+
+input:checked+label {
+    color: #33FF33;
+}
+
+input[type=checkbox] {
+    margin: 0;
+
+    vertical-align: middle;
+}
+
+input[type=range]{
+    vertical-align: middle;
+}
+
+#gameControls {
+    float: left;
+
+    width: 260px;
+    height: 700px;
+
+    border-left: 1px solid #025167;
+    background-color: #383838;
+}
+
+#gameBoard {
+    float: left;
+}
+
+#buttonContainer {
+    width: 140px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+#gameSettings {
+    width: 240px;
+    /*height: 120px;*/
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.settingsHeader {
+    display: inline-block;
+
+    width: 100%;
+    padding-bottom: 10px;
+
+    text-align: left;
+
+    color: #FFA040;
+
+    font-size: 30px;
+    /*font-weight: 800;*/
+}
