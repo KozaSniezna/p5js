@@ -49,7 +49,6 @@ function readSettings(){
     settings.randomStartPos = select('#randomStartPos').checked();
     settings.randomStartVel = select('#randomStartVel').checked();
     settings.debuggingOn = select('#debug').checked();
-    console.log(settings);
 }
 
 function keyPressed() {
