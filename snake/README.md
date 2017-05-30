@@ -11,8 +11,5 @@ A playable [Demo](https://toferj.github.io/p5js/snake/) can be found here.
 - Add longest snake record... without a DB or some sort of online storage, this would only be per game session...
 - It seems impossible to ride along the walls now. Check wall collision detection.
   (as a stopgap, I just made it where food will never be placed exactly on any wall)
-Other possible user controlled settings:
- - start snake at a random place on the screen
- - start snake moving in a random direction
- 
+
 Anything other ideas?
