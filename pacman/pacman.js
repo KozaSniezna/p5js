@@ -4,7 +4,7 @@ function Pacman(r) {
     var vc = 0; // vertex count
     var r2 = r;
 
-    this.pos = createVector(floor(cols / 2), floor(rows / 2) + (SCALE / 2)); // + SCALE/2 nudges him down onto the grid...
+    this.pos = createVector(floor(cols / 2), floor(rows / 2)); // + SCALE/2 nudges him down onto the grid...
     this.pos.mult(SCALE);
     this.dir = LEFT;
     this.r = r; // our original r value...
@@ -65,11 +65,11 @@ Pacman.prototype.show = function(opened) {
     var newX;
     var newY;
     if (this.dir === UP || this.dir === DOWN) {
-        newX = floor(this.pos.x / SCALE) * SCALE;
+        newX = round(this.pos.x / SCALE) * SCALE;
         newY = this.pos.y;
     } else {
         newX = this.pos.x;
-        newY = floor(this.pos.y / SCALE) * SCALE;
+        newY = round(this.pos.y / SCALE) * SCALE;
     }
     fill(this.clr.r, this.clr.g, this.clr.b);
     stroke(0);
