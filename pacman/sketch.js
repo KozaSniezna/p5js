@@ -23,7 +23,7 @@ function setup() {
     LEFT = (180 * PI) / 180;
     RIGHT = (0 * PI) / 180;
 
-    pacman = new Pacman(13);
+    pacman = new Pacman(10);
 }
 
 function draw() {
