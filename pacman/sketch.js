@@ -2,7 +2,7 @@ var pacman;
 
 // game constants
 var SCALE = 20;
-var SPEED = 0.15;
+var SPEED = 0.18;
 var UP;
 var DOWN;
 var LEFT;
@@ -34,7 +34,6 @@ function draw() {
         noFill();
         for (var x = 0; x < width; x += SCALE) {
             for (var y = 0; y < height; y += SCALE) {
-                // line(x,y,x,height);
                 rect(x, y, SCALE, SCALE);
             }
         }

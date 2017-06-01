@@ -46,18 +46,18 @@ function Pacman(r) {
 Pacman.prototype.move = function(x, y, dir) {
     // dir is the number of Radians to rotate
     this.dir = dir;
-    this.xspeed = x;
-    this.yspeed = y;
+    this.xspeed = x * SCALE;
+    this.yspeed = y * SCALE;
 
 };
 
 Pacman.prototype.update = function() {
 
-    this.pos.x += this.xspeed * SCALE;
-    this.pos.y += this.yspeed * SCALE;
+    this.pos.x += this.xspeed;
+    this.pos.y += this.yspeed;
 
-    this.pos.x = constrain(this.pos.x, this.r, width - this.r);
-    this.pos.y = constrain(this.pos.y, this.r, height - this.r);
+    this.pos.x = constrain(this.pos.x, SCALE - (this.r / 2), width - this.r);
+    this.pos.y = constrain(this.pos.y, SCALE - (this.r) - 3, height - (this.r * 2) +2);
 
 };
 
