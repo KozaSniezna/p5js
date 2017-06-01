@@ -60,6 +60,7 @@ Particle.prototype.show = function() {
     if (this.heartRocket) {
         push();
         translate(this.fx, this.fy);
+        strokeWeight(1);
         point(this.pos.x, this.pos.y);
         pop();
     } else {
