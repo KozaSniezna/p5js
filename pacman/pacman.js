@@ -57,15 +57,24 @@ Pacman.prototype.update = function() {
     this.pos.y += this.yspeed;
 
     this.pos.x = constrain(this.pos.x, SCALE - (this.r / 2), width - this.r);
-    this.pos.y = constrain(this.pos.y, SCALE - (this.r) - 3, height - (this.r * 2) +2);
+    this.pos.y = constrain(this.pos.y, SCALE - (this.r) - 3, height - (this.r * 2) + 2);
 
 };
 
 Pacman.prototype.show = function(opened) {
+    var newX;
+    var newY;
+    if (this.dir === UP || this.dir === DOWN) {
+        newX = floor(this.pos.x / SCALE) * SCALE;
+        newY = this.pos.y;
+    } else {
+        newX = this.pos.x;
+        newY = floor(this.pos.y / SCALE) * SCALE;
+    }
     fill(this.clr.r, this.clr.g, this.clr.b);
     stroke(0);
     push();
-    translate(this.pos.x, this.pos.y + (SCALE / 2));
+    translate(newX, newY);
     rotate(this.dir);
     if (opened) {
         beginShape();
