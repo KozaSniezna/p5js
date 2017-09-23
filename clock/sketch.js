@@ -43,7 +43,7 @@ function draw() {
         stroke(hColor,mColor,sColor);
         strokeWeight(sw);
         let hrsStart = map(hr%12, 0, 12, 0, 360);
-        arc(0,0,175,175,hrsStart-15,hrsStart+15);
+        arc(0,0,175,175,hrsStart-15,hrsStart+15,PIE);
     pop();
 
 
@@ -54,7 +54,7 @@ function draw() {
         stroke(hColor,mColor,sColor);
         strokeWeight(sw);
         let minStart = map(mn, 0, 60, 0, 360);
-        arc(0,0,250,250,minStart-3,minStart+3);
+        arc(0,0,250,250,minStart-3,minStart+3,PIE);
     pop();
 
 
@@ -87,6 +87,6 @@ function draw() {
     }
     // text(hr+":"+mn+":"+sc+' '+ampm, 125, 175);
     text(hr+":"+mn+":"+sc+' '+ampm, -30, 5);
-    text(hColor+','+mColor+','+sColor, 125, 190);
+    text('R,G,B:'+hColor+','+mColor+','+sColor, 100, 190);
     pop();
 }
